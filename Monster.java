@@ -43,5 +43,14 @@ abstract class Monster {
         this.type = type;
     }
 
-    abstract void attack(Monster opponent);
+    public abstract boolean attack(Monster opponent);
+
+    public boolean isKO() {
+        if (life <= 0) {
+            System.out.println(this.name + " is KO!");
+            return true;
+        }
+        System.out.println(this.name + " has " + this.life + " points remaining.");
+        return false;
+    }
 }
