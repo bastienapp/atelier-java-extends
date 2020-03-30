@@ -2,6 +2,7 @@ abstract class Monster {
 
     private String name;
     private int attack;
+    private int life = 40;
     private String type;
 
     public Monster(String name, int attack, String type) {
@@ -26,17 +27,20 @@ abstract class Monster {
         this.attack = attack;
     }
 
+    public int getLife() {
+        return this.life;
+    }
+
+    public void setLife(int life) {
+        this.life = life;
+    }
+
     public String getType() {
         return this.type;
     }
 
     public void setType(String type) {
         this.type = type;
-    }
-
-    public Monster name(String name) {
-        this.name = name;
-        return this;
     }
 
     abstract void attack(Monster opponent);
