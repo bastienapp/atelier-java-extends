@@ -1,5 +1,7 @@
 abstract class Monster {
 
+    // DO NOT TOUCH ANYTHING IN THIS CLASS !
+
     private String name;
     private int attack;
     private int life = 40;
