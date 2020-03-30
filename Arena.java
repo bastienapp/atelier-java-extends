@@ -1,10 +1,20 @@
+import java.util.ArrayList;
+import java.util.List;
+
 class Arena {
 
     public static void main(String[] args) {
         
-        // TODO : create two monsters
+        // create two monsters
+        Monster tornado = new AirMonster("Tornado", 2);
+        Monster typhon = new WaterMonster("Typhon", 8);
 
-        // TODO : monsters attack each other
-        
+        // monsters attack each other
+        while (tornado.getLife() > 0 && typhon.getLife() > 0) {
+            tornado.attack(typhon);
+            if (typhon.getLife() > 0) {
+                typhon.attack(tornado);
+            }
+        }
     }
 }
